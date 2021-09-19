@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "school", "school\school.csproj", "{0614AD2C-2E8D-4CF6-8372-90CE1C94DB3A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLibrary", "..\..\..\bazeDeDate\dataAcces\exempluMysql\ORM-mySql\DataAccessLibrary\DataAccessLibrary.csproj", "{619D349C-BFD8-4FCB-B8B1-B3185E516629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{FDBE79E5-4EFD-4182-BD75-FF60F7B852DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0614AD2C-2E8D-4CF6-8372-90CE1C94DB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0614AD2C-2E8D-4CF6-8372-90CE1C94DB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0614AD2C-2E8D-4CF6-8372-90CE1C94DB3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{619D349C-BFD8-4FCB-B8B1-B3185E516629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{619D349C-BFD8-4FCB-B8B1-B3185E516629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{619D349C-BFD8-4FCB-B8B1-B3185E516629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{619D349C-BFD8-4FCB-B8B1-B3185E516629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDBE79E5-4EFD-4182-BD75-FF60F7B852DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBE79E5-4EFD-4182-BD75-FF60F7B852DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBE79E5-4EFD-4182-BD75-FF60F7B852DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBE79E5-4EFD-4182-BD75-FF60F7B852DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

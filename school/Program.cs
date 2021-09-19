@@ -1,4 +1,6 @@
-﻿using System;
+﻿using school.model;
+using school.repository;
+using System;
 
 namespace school
 {
@@ -6,7 +8,9 @@ namespace school
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PersonRepository personRepository = new PersonRepository("Test");
+            foreach (Person person in personRepository.getProffesors())
+                Console.WriteLine(person);
         }
     }
 }
