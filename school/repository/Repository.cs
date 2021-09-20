@@ -14,5 +14,7 @@ namespace school.repository
         protected string connection;
         protected MySqlDataAccess db = new MySqlDataAccess();
 
+        public abstract void readAll();
+        public abstract void printAll();
     }
 }

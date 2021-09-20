@@ -10,19 +10,21 @@ namespace school.repository
         public PersonRepository(string dbConnection)
         {
             connection = CommonMethods.getConnectionString(dbConnection);
-            readAllPersons();
+            readAll();
         }
 
-        public void readAllPersons()
+        public override void readAll()
         {
             string sql = "select * from person";
             all = db.LoadData<Person, dynamic>(sql, new { }, connection);
         }
-        public void printAllPersons()
+        public override void printAll()
         {
             foreach(Person person in all)
                 Console.WriteLine(person);
         }
+
+
         public List<Person> getProffesors()
         {
             string sql = "select * from person where role = 'professor';";

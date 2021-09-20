@@ -8,9 +8,7 @@ namespace school
     {
         static void Main(string[] args)
         {
-            PersonRepository personRepository = new PersonRepository("Test");
-            foreach (Person person in personRepository.getProffesors())
-                Console.WriteLine(person);
+            
         }
     }
 }
