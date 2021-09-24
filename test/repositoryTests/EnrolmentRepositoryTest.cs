@@ -14,5 +14,11 @@ namespace test.repositoryTests
             EnrolmentRepository repository = new EnrolmentRepository("Test");
             Assert.Equal(4, repository.All.Count);
         }
+        [Fact]
+        public void testGetEnrolmentsByPersonID()
+        {
+            EnrolmentRepository repository = new EnrolmentRepository("Test");
+            Assert.Equal(2, repository.getEnrolmentsByPerson(1).Count);
+        }
     }
 }

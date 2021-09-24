@@ -27,7 +27,7 @@ namespace school.model
 
         public override string ToString()
         {
-            return id.ToString();
+            return name + " - " + department;
         }
         public override bool Equals(object obj)
         {

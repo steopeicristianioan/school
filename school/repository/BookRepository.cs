@@ -24,6 +24,25 @@ namespace school.repository
                 Console.WriteLine(book);
         }
 
+        public List<Book> getByName(string name)
+        {
+            string sql = "select * from book where book_name like '%n%' ";
+            return db.LoadData<Book, dynamic>(sql, new { n=name}, connection);
+        }
+        public Book getBookByName(string name)
+        {
+            string sql = "select * from book where book_name = @n ";
+            List <Book> get = db.LoadData<Book, dynamic>(sql, new { n = name }, connection);
+            if (get.Count == 0)
+                return null;
+            return get[0];
+        }
+        public void updateBorrower(int borrowerID, int bookID)
+        {
+            DateTime time = DateTime.Now;
+            string sql = "update book set person_id = @borrowerID, created_at = @time where id = @bookID";
+            db.LoadData<Book, dynamic>(sql, new { borrowerID = borrowerID, time = time, bookID = bookID }, connection);
+        }
 
     }
 }

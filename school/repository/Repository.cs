@@ -12,6 +12,7 @@ namespace school.repository
         public List<T> All { get => this.all; }
 
         protected string connection;
+
         protected MySqlDataAccess db = new MySqlDataAccess();
 
         public abstract void readAll();

@@ -23,5 +23,14 @@ namespace school.repository
             foreach(Course course in all)
                 Console.WriteLine(course);
         }
+
+        public Course getByID(int id)
+        {
+            string sql = "select * from course where id = @id";
+            List<Course> courses = db.LoadData<Course, dynamic>(sql, new { id = id }, connection);
+            if (courses.Count == 0)
+                return null;
+            return courses[0];
+        }
     }
 }

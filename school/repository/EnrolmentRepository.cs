@@ -23,5 +23,11 @@ namespace school.repository
             foreach(Enrolment enrolment in all)
                 Console.WriteLine(enrolment);
         }
+
+        public List<Enrolment> getEnrolmentsByPerson(int person_ID)
+        {
+            string sql = "select * from enrolment where person_id = @id";
+            return db.LoadData<Enrolment, dynamic>(sql, new { id = person_ID }, connection);
+        }
     }
 }

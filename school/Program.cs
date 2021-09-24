@@ -1,5 +1,6 @@
 ﻿using school.model;
 using school.repository;
+using school.view;
 using System;
 
 namespace school
@@ -8,7 +9,8 @@ namespace school
     {
         static void Main(string[] args)
         {
-            
+            EnrolmentView enrolmentView = new EnrolmentView(1);
+
         }
     }
 }
