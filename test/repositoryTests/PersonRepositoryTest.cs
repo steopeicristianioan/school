@@ -26,6 +26,12 @@ namespace test
                 Console.WriteLine(person);
             Assert.Single(personRepository.getProffesors());
         }
-      
+        [Fact]
+        public void testGetByID()
+        {
+            PersonRepository repository = new PersonRepository("Test");
+            Assert.Null(repository.getByID(0));
+            Assert.Equal("Cristian", repository.getByID(1).First_Name);
+        }
     }
 }

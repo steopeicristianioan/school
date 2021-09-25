@@ -14,5 +14,17 @@ namespace test.repositoryTests
             CourseRepository repository = new CourseRepository("Test");
             Assert.Equal(3, repository.All.Count);
         }
+        [Fact]
+        public void testGetById()
+        {
+            CourseRepository repository = new CourseRepository("Test");
+            Assert.Equal("Algoritmi vectori", repository.getByID(1).Name);
+        }
+        [Fact]
+        public void testGetByName()
+        {
+            CourseRepository repository = new CourseRepository("Test");
+            Assert.Equal(1, repository.getByName("Algoritmi vectori").ID);
+        }
     }
 }

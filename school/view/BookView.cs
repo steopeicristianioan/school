@@ -14,9 +14,11 @@ namespace school.view
 
         private void Menu()
         {
+            Console.WriteLine("\n-----------------Book Menu---------------------");
             Console.WriteLine("Insert 1 to search books (by name)");
             Console.WriteLine("Insert 2 to borrow specific book");
             Console.WriteLine("Insert 3 to return a specific book");
+            Console.WriteLine("Insert anything else to return to main menu");
             Console.WriteLine("");
         }
         private void loadSearchMenu()
@@ -86,6 +88,7 @@ namespace school.view
                         loadBorrowMenu();
                     else if (option == 3)
                         loadReturnMenu();
+                    else ok = false;
                 }
             } while (ok);
         }

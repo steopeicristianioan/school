@@ -23,5 +23,15 @@ namespace school.repository
             foreach (Person_Id_Card person_Id_Card in all)
                 Console.WriteLine(person_Id_Card);
         }
+
+        public Person_Id_Card getByNumber(int number)
+        {
+            string sql = "select * from person_id_card where card_number = @value";
+            List<Person_Id_Card> cards = db.LoadData<Person_Id_Card, dynamic>(sql,
+                new { value = number }, connection);
+            if (cards.Count == 0)
+                return null;
+            return cards[0];
+        }
     }
 }

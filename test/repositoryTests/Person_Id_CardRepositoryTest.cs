@@ -14,5 +14,13 @@ namespace test.repositoryTests
             Person_Id_CardRepository repository = new Person_Id_CardRepository("Test");
             Assert.Equal(4, repository.All.Count);
         }
+
+        [Fact]
+        public void testGetByNumber()
+        {
+            Person_Id_CardRepository repository = new Person_Id_CardRepository("Test");
+            Assert.Null(repository.getByNumber(123));
+            Assert.Equal(1, repository.getByNumber(45136).Person_ID);
+        }
     }
 }

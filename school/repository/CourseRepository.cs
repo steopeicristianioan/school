@@ -32,5 +32,13 @@ namespace school.repository
                 return null;
             return courses[0];
         }
+        public Course getByName(string name)
+        {
+            string sql = "select * from course where name = @n";
+            List<Course> courses = db.LoadData<Course, dynamic>(sql, new { n = name }, connection);
+            if (courses.Count == 0)
+                return null;
+            return courses[0];
+        }
     }
 }

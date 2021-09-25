@@ -36,7 +36,7 @@ namespace school.model
 
         public override string ToString()
         {
-            return this.id.ToString() + " " + this.first_name + " " + this.last_name;
+            return this.first_name + " " + this.last_name;
         }
         public override bool Equals(object obj)
         {

@@ -9,8 +9,7 @@ namespace school
     {
         static void Main(string[] args)
         {
-            EnrolmentView enrolmentView = new EnrolmentView(1);
-
+            LoginView login = new LoginView();
         }
     }
 }

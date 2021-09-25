@@ -30,7 +30,7 @@ namespace school.model
 
         public override string ToString()
         {
-            return book_name + ((person_id == 5) ? " - not borrowed" : " - borrowed");
+            return book_name + ((person_id == 5) ? " - available" : " - unavailable");
         }
         public override bool Equals(object obj)
         {
